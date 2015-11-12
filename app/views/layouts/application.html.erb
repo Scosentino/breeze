@@ -10,21 +10,43 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-	<nav class="navbar navbar-inverse navbar-fixed-top">
+	<div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/sdk.js#xfbml=1&version=v2.5";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script> <!--fb widget script end-->
+    <nav class="navbar navbar-inverse navbar-fixed-top">
 	  <div class="container-fluid">
 	    <div class="navbar-header">
-	      <a class="navbar-brand nav-logo" href="#"></a>
-	    </div>
-	    <div>
-	      <ul class="nav navbar-nav navbar-right nav-pills" id="highlighted">
-	        <li class="active"><a href="#">Fees</a></li>
-	        <li><a href="#">Why choose us</a></li>
-	        <li><a href="#">Step-by-step guide</a></li> 
-	        <li><a href="#">FAQs</a></li> 
-	      </ul>
-	    </div>
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span> 
+          </button>	
+	      <a class="navbar-brand nav-logo" href="#"><img src="orange.jpg"></a>
+	    </div>	    
+	      <div class="collapse navbar-collapse" id="myNavbar">
+		    <ul class="nav navbar-nav navbar-right nav-pills nav-stacked" id="highlighted">
+		      <li class="active"><a href="#">Fees</a></li>
+		      <li><a href="#">Why choose us</a></li>
+		      <li><a href="#">Step-by-step guide</a></li> 
+		      <li><a href="#">FAQs</a></li> 
+	        </ul>
+	      </div>	    
 	  </div>
-	</nav>	
+	</nav>
+	<footer class="footer">
+	  <div class="footer-content">
+		  &copy  Breeze Street 2012-2016
+	      <a href="https://twitter.com/Breeze_St" class="twitter-follow-button" data-show-count="false">Follow @Breeze_St</a>
+	      <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');
+	      </script> <!--Twitter widget end-->
+		  <div class="fb-like" data-href="https://www.facebook.com/BreezeStreet/" data-layout="button" data-action="like" data-show-faces="true" data-share="false"></div>  <!--FB widget end-->   
+      </div>
+    </footer>	
 <%= yield %>
 
 </body>
