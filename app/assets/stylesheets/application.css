@@ -13,3 +13,20 @@
  *= require_tree .
  *= require_self
  */
+
+/**Navbar**/
+ 
+ #highlighted >.active >a {
+ 	color: #3333FF;
+ 	background-color: white;
+ }
+
+ .navbar-inverse {
+ 	background-color: #3333FF;
+ 	border-color: white;
+ }
+
+.nav-logo {
+	background-image: url(orange-logo.jpg);
+}
+
