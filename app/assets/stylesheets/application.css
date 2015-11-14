@@ -49,10 +49,9 @@
 }
 
 .twitter-follow-button {
-	margin: 0 0 0 10px;
-	margin-top: 5px;
+	margin: 5px 0 0 10px;
+	bottom: 0;
 }
-
 
 /***********************index****************************/
 
