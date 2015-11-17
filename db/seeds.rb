@@ -6,4 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-Product.create(:name => "123 Rainbow Rd")
+1.upto(200) do |i|
+  Product.create(:name => "Property #{i}", :price => "#{i}000")
+end
