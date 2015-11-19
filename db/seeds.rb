@@ -6,6 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-1.upto(200) do |i|
-  Product.create(:name => "Property #{i}", :price => "#{i}000")
+1.upto(50) do |i|
+  Product.create(:name => "Property #{i}", :price => "#{i}000", :image_url =>"House#{i}.jpg")
 end
